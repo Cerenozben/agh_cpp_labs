@@ -1,0 +1,32 @@
+{
+  "name": "Ubuntu",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "cmake.configureOnOpen": true,
+        "cmake.ctest.testExplorerIntegrationEnabled": false,
+        "files.autoSave": "onFocusChange",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "errorLens.messageTemplate": "$message Src:$source Problems:$count",
+        "errorLens.messageBackgroundMode": "message",
+        "errorLens.gutterIconSize": "80%"
+      },
+      "extensions": [
+        "matepek.vscode-catch2-test-adapter",
+        "ms-vscode.cpptools-themes",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "webfreak.debug",
+        "usernamehw.errorlens",
+        "ibm.output-colorizer"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "workspaceFolder": "${localWorkspaceFolder}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind,consistency=cached"
+}
